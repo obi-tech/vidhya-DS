@@ -6,7 +6,7 @@ The implementation of Module-Lattice-Based Key-Encapsulation Mechanism Standard,
 It is specified in [NIST FIPS 203](https://csrc.nist.gov/pubs/fips/203/final).
 For this project, the FIPS 203 standard has been implemented in a cryptographic library
 
----
+
 
 ## Background
 A key-encapsulation mechanism (KEM) is a set of algorithms that, under specific conditions, enable two parties to establish a shared secret key over a public channel.
@@ -20,7 +20,8 @@ Currently, ML-KEM is considered secure, even against adversaries equipped with l
 • The three parameter sets, listed in order of increasing security strength and decreasing performance, are: **ML-KEM-512, ML-KEM-768, and ML-KEM-1024**.
 • The key exchange algorithms specified are: **ML-KEM.KeyGen, ML-KEM.Encaps, and ML-KEM.Decaps**.
 
----
+
+
 
 ## Algorithms
 ML-KEM operates with three algorithms: 
@@ -33,11 +34,14 @@ The **ML-KEM.Encaps** algorithm accepts an encapsulation key as input, generates
 • **ML-KEM.Decaps**
 The **ML-KEM.Decaps** algorithm accepts a decapsulation key and an ML-KEM ciphertext as input, uses no randomness, and outputs a shared secret key.
 
+
+
 ## Parameter Sets
 To instantiate ML-KEM, one must select a parameter set. Each parameter set is associated with a particular trade-off between security and performance. The three possible parameter sets are explained below:
 • ML-KEM-512 (security category 1)
 • ML-KEM-768 (security category 3)
 • ML-KEM-1024 (security category 5)
+
 
 
 ## How the standard has been implemented
@@ -61,7 +65,7 @@ from quantumcrypto.utils.functions import ml_kem_gey_gen, ml_kem_encaps, ml_kem_
 
 5. Proceed to generate keys using the specified algorithms.
 
-    use as described in [ml_kem.py](quantumcrypto/ml_kem.py)
+    - use as described in [ml_kem.py](quantumcrypto/ml_kem.py)
 
 
 ## How to contribute to the project
