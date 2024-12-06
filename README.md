@@ -1,10 +1,10 @@
 
-# Post-Quantum Crypto – KEM implementation
+# Post-Quantum Crypto: Module-Lattice-Based Key-Encapsulation Mechanism (ML-KEM) Implementation
 
 ## Description
-The implementation of Module-Lattice-Based Key-Encapsulation Mechanism Standard, one of the approved three Federal Information Processing Standards (FIPS) for post-quantum cryptography. 
-It is specified in [NIST FIPS 203](https://csrc.nist.gov/pubs/fips/203/final).
-For this project, the FIPS 203 standard has been implemented in a cryptographic library
+The implementation of ML-KEM Standard, one of the three Federal Information Processing Standards (FIPS) approved for post-quantum cryptography. 
+This standard is specified in [NIST FIPS 203](https://csrc.nist.gov/pubs/fips/203/final).
+For this project, the FIPS 203 standard has been implemented for use in a cryptographic library
 
 
 
@@ -21,6 +21,8 @@ Currently, ML-KEM is considered secure, even against adversaries equipped with l
 • The key exchange algorithms specified are: **ML-KEM.KeyGen, ML-KEM.Encaps, and ML-KEM.Decaps**.
 
 
+## How the standard has been implemented
+All the sub-algorithms have been implemented as functions in Python to realize the three main algorithms: **ML-KEM.KeyGen, ML-KEM.Encaps, and ML-KEM.Decaps**. The parameter sets: **ML-KEM-512, ML-KEM-768, and ML-KEM-1024** have also been well-defined, allowing users to easily select their desired parameter set based on desired security and performance level.
 
 
 ## Algorithms
@@ -42,10 +44,6 @@ To instantiate ML-KEM, one must select a parameter set. Each parameter set is as
 • ML-KEM-768 (security category 3)
 • ML-KEM-1024 (security category 5)
 
-
-
-## How the standard has been implemented
-All the sub-algorithms have been implemented as functions in Python to realize the three main algorithms: **ML-KEM.KeyGen, ML-KEM.Encaps, and ML-KEM.Decaps**. The parameter sets: **ML-KEM-512, ML-KEM-768, and ML-KEM-1024** have also been well-defined, allowing users to easily select their desired parameter set based on desired security and performance level.
 
 
 ## How to use the product
